@@ -2,9 +2,7 @@
 
 This is an ESP32 C/C++ (esp-idf) library for the DHT22 low cost temperature/humidity sensors.
 
-Forked from https://github.com/Andrey-m/DHT22-lib-for-esp-idf
-
-Which was forked from https://github.com/gosouth/DHT22 and https://github.com/gosouth/DHT22-cpp.
+Forked from https://github.com/Andrey-m/DHT22-lib-for-esp-idf, which was in turn forked from https://github.com/gosouth/DHT22 and https://github.com/gosouth/DHT22-cpp.
 
 I simply added `CMakeLists.txt` and `idf_component.yml` files to more easily incorporate it in `esp-idf` projects.
 
@@ -93,7 +91,7 @@ void app_main()
 }
 ```
 
-How to specify your project's `idf_component.yml` file in order to use it as a dependency:
+Example how to specify your project's `main/idf_component.yml` file in order to use it as a dependency:
 
 ```
 version: "1.0.0"
