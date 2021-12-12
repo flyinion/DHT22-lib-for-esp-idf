@@ -2,9 +2,11 @@
 
 This is an ESP32 C/C++ (esp-idf) library for the DHT22 low cost temperature/humidity sensors.
 
-C version Based on: https://github.com/gosouth/DHT22
+Forked from https://github.com/Andrey-m/DHT22-lib-for-esp-idf
 
-C++ version Based on: https://github.com/gosouth/DHT22-cpp
+Which was forked from https://github.com/gosouth/DHT22 and https://github.com/gosouth/DHT22-cpp.
+
+I simply added `CMakeLists.txt` and `idf_component.yml` files to more easily incorporate it in `esp-idf` projects.
 
 
 **USE IN C**
@@ -89,4 +91,20 @@ void app_main()
 
     xTaskCreate(&DHT_task, "DHT_task", 2048, NULL, 5, NULL);
 }
+```
+
+How to specify your project's `idf_component.yml` file in order to use it as a dependency:
+
+```
+version: "1.0.0"
+targets:
+  - esp32
+description: DDNet Ambient Sensor
+url: https://github.com/flyinion/ambient
+dependencies:
+  idf: ">=4.1"
+  DHT22-lib-for-esp-idf: 
+    version: "1.0.0"
+    # path: /home/jmfife/projects/DHT22-lib-for-esp-idf
+    git: ssh://github.com/flyinion/DHT22-lib-for-esp-idf.git
 ```
