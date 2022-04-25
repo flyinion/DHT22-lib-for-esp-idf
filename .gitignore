@@ -1,0 +1,14 @@
+# esp-idf
+build/
+test/build/
+managed_components/
+dependencies.lock
+
+# mac - although this technically should go in a global .gitignore on the specific machine
+.DS_Store
+
+# vscode - although this technically should go in a global .gitignore on the specific machine
+.vscode
+
+# platformio
+.pio/
