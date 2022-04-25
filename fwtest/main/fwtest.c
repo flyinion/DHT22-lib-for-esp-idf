@@ -1,12 +1,7 @@
 #include <stdio.h>
 #include "unity.h"
-#include "DHT.h"
 
 static void print_banner(const char* text);
-
-TEST_CASE("test1", "[testmodule]") {
-        TEST_ASSERT_EQUAL(0, 0);
-}
 
 void app_main(void)
 {
