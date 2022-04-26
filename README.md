@@ -4,12 +4,39 @@ This is an ESP32 C/C++ (esp-idf) library for the DHT22 low cost temperature/humi
 
 Forked from https://github.com/Andrey-m/DHT22-lib-for-esp-idf, which was in turn forked from https://github.com/gosouth/DHT22 and https://github.com/gosouth/DHT22-cpp.
 
-I simply added `CMakeLists.txt` and `idf_component.yml` files to more easily incorporate it in `esp-idf` projects.
+I added `CMakeLists.txt` and `idf_component.yml` files to more easily incorporate it in `esp-idf` projects.
 
+I also added tests and made the examples buildable in `esp-idf`.
 
-**USE IN C**
+## Tests
 
-See examples/Example on C/main.c
+See the example code below, or in repo [in C](https://github.com/flyinion/DHT22-lib-for-esp-idf/blob/master/examples/C/main/main.c) or [in C++](https://github.com/flyinion/DHT22-lib-for-esp-idf/blob/master/examples/CPP/main/main.cpp).
+
+```sh
+$ cd examples/C
+$ idf.py set-target esp32
+...
+$ idf.py -p /dev/ttyUSB0 flash monitor
+...
+```
+
+## Examples
+
+See the example code below, or in repo [in C](https://github.com/flyinion/DHT22-lib-for-esp-idf/blob/master/examples/C/main/main.c) or [in C++](https://github.com/flyinion/DHT22-lib-for-esp-idf/blob/master/examples/CPP/main/main.cpp). 
+
+To build and run and monitor:
+
+```sh
+$ cd examples/C
+$ idf.py set-target esp32
+...
+$ idf.py -p /dev/ttyUSB0 flash monitor
+...
+```
+
+## Use in C
+
+See [example code in C](https://github.com/flyinion/DHT22-lib-for-esp-idf/blob/master/examples/C/main/main.c).
 
 ```C
 void DHT_task(void *pvParameter)
@@ -48,9 +75,9 @@ void app_main()
     xTaskCreate(&DHT_task, "DHT_task", 2048, NULL, 5, NULL);
 }
 ```
-**USE IN C++**
+## Use in C++
 
-See examples/Example on C++/main.cpp
+See [example code in C++](https://github.com/flyinion/DHT22-lib-for-esp-idf/blob/master/examples/CPP/main/main.cpp).
 
 ```C
 void DHT_task(void *pvParameter)
@@ -90,6 +117,8 @@ void app_main()
     xTaskCreate(&DHT_task, "DHT_task", 2048, NULL, 5, NULL);
 }
 ```
+
+## Incorporate in ESP-IDF as a Dependency
 
 Example how to specify your project's `main/idf_component.yml` file in order to use it as a dependency:
 
