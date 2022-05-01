@@ -14,4 +14,4 @@ set(TEST_COMPONENTS "DHT22-lib-for-esp-idf" CACHE STRING "List of components to 
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 
-project(DHT22-libfor-esp-idf-fwtest)                       
+project(DHT22-lib-for-esp-idf-fwtest)
