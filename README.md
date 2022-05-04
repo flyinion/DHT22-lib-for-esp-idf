@@ -13,7 +13,7 @@ I also added tests and made the examples buildable in `esp-idf`.
 See the example code below, or in repo [in C](https://github.com/flyinion/DHT22-lib-for-esp-idf/blob/master/examples/C/main/main.c) or [in C++](https://github.com/flyinion/DHT22-lib-for-esp-idf/blob/master/examples/CPP/main/main.cpp).
 
 ```sh
-$ cd examples/C
+$ cd fwtest
 $ idf.py set-target esp32
 ...
 $ idf.py -p /dev/ttyUSB0 flash monitor
