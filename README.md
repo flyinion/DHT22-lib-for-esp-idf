@@ -1,4 +1,4 @@
-# DHT22 / AM2302 C/C++ library for ESP32 (ESP-IDF)
+# DHT22 / AM2302 C/C++ Component for ESP32 (ESP-IDF)
 
 This is an ESP32 C/C++ (esp-idf) library for the DHT22 low cost temperature/humidity sensors.
 
@@ -10,7 +10,7 @@ I also added tests and made the examples buildable in `esp-idf`.
 
 ## Tests
 
-See the example code below, or in repo [in C](https://github.com/flyinion/DHT22-lib-for-esp-idf/blob/master/examples/C/main/main.c) or [in C++](https://github.com/flyinion/DHT22-lib-for-esp-idf/blob/master/examples/CPP/main/main.cpp).
+To build and run firmware (integration) tests: 
 
 ```sh
 $ cd fwtest
@@ -23,6 +23,8 @@ $ idf.py -p /dev/ttyUSB0 flash monitor
 ## Examples
 
 See the example code below, or in repo [in C](https://github.com/flyinion/DHT22-lib-for-esp-idf/blob/master/examples/C/main/main.c) or [in C++](https://github.com/flyinion/DHT22-lib-for-esp-idf/blob/master/examples/CPP/main/main.cpp). 
+
+Edit the code if necessary to set the correct GPIO pin to which you have wired your DHT sensor.
 
 To build and run and monitor:
 
